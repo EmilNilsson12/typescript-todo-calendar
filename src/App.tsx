@@ -1,21 +1,18 @@
 import './App.css';
-import Feed from './Components/Feed';
-import Logo from './Components/Logo';
-import List from './Components/List';
-import Menu from './Components/Menu';
+import AllTodos from './Components/AllTodos';
+import Calendar from './Components/Calendar';
+import DailyTodos from './Components/DailyTodos';
 
-// List
-// Logo
-// Feed
-// Menu
+// DailyTodos
+// AllTodos
+// Calendar
 
 function App() {
 	return (
 		<div className='App container'>
-			<List />
-			<Logo />
-			<Feed />
-			<Menu />
+			<AllTodos />
+			<Calendar />
+			<DailyTodos />
 		</div>
 	);
 }

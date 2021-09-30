@@ -17,24 +17,21 @@
 	grid-auto-columns: 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr;
-	/* gap: 5px 20px; */
+	gap: 5px 20px;
 	grid-template-areas:
-		'List Logo Logo Menu'
-		'List Feed Feed Menu'
-		'List Feed Feed Menu'
-		'List Feed Feed Menu';
+		'AllTodos Calendar Calendar DailyTodos'
+		'AllTodos Calendar Calendar DailyTodos'
+		'AllTodos Calendar Calendar DailyTodos'
+		'AllTodos Calendar Calendar DailyTodos';
 }
-.Logo {
-	grid-area: Logo;
+.DailyTodos {
+	grid-area: DailyTodos;
 }
-.Menu {
-	grid-area: Menu;
+.AllTodos {
+	grid-area: AllTodos;
 }
-.List {
-	grid-area: List;
-}
-.Feed {
-	grid-area: Feed;
+.Calendar {
+	grid-area: Calendar;
 }
 
 .App-logo {
@@ -45,6 +42,16 @@
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		grid-template-areas:
+			'AllTodos AllTodos AllTodos AllTodos'
+			'Calendar Calendar Calendar Calendar'
+			'Calendar Calendar Calendar Calendar'
+			'DailyTodos DailyTodos DailyTodos DailyTodos';
 	}
 }
 
