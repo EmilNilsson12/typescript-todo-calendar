@@ -12,8 +12,6 @@ interface Props {
 
 const AllTodos = (props: Props) => {
 	const { todos } = props;
-	console.log('todos: ', todos);
-	console.log('todos length: ', todos.length);
 
 	return (
 		<div className='AllTodos'>
