@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Feed from './Components/Feed';
+import Logo from './Components/Logo';
+import List from './Components/List';
+import Menu from './Components/Menu';
+
+// List
+// Logo
+// Feed
+// Menu
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App container'>
+			<List />
+			<Logo />
+			<Feed />
+			<Menu />
+		</div>
+	);
 }
 
 export default App;
