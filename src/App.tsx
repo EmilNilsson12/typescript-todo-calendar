@@ -31,8 +31,6 @@ const App: FunctionComponent = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log('todos updated');
-		console.log('todos: ', todos);
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}, [todos]);
 
