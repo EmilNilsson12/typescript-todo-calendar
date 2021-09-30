@@ -4,6 +4,7 @@ import AllTodos from './Components/AllTodos';
 import Calendar from './Components/Calendar';
 import DailyTodos from './Components/DailyTodos';
 import TodoForm from './Components/TodoForm/TodoForm';
+import moment from 'moment';
 
 // DailyTodos
 // AllTodos
@@ -51,7 +52,7 @@ const App: FunctionComponent = () => {
 		<div className='App container'>
 			<AllTodos todos={todos} />
 			<Calendar />
-			<TodoForm addTodo={handleTodoAdd} />
+			<TodoForm initialDeadline={moment()} addTodo={handleTodoAdd} />
 			<DailyTodos />
 		</div>
 	);

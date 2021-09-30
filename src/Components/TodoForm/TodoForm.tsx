@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import moment from 'moment';
+
+import moment, { Moment } from 'moment';
 import { v4 as uuidv4 } from 'uuid';
 
 import './TodoForm.css';
@@ -13,14 +14,17 @@ interface Todo {
 }
 
 interface Props {
+	initialDeadline: Moment;
 	addTodo(todoObj: Todo): void;
 }
 
 function TodoForm(props: Props) {
 	const [inputTitle, setInputTitle] = useState('');
 	const [inputDesc, setInputDesc] = useState('');
-	const [inputDate, setInputDate] = useState();
-	const [inputDateValue, setInputDateValue] = useState('');
+	const [inputDate, setInputDate] = useState(props.initialDeadline);
+	const [inputDateValue, setInputDateValue] = useState(
+		inputDate.clone().toISOString().split('T')[0]
+	);
 
 	const firstFocusInputElement = useRef(null);
 
@@ -61,18 +65,19 @@ function TodoForm(props: Props) {
 		// }
 
 		props.addTodo({
-			// title: inputTitle,
-			// description: inputDesc,
-			// deadline: inputDate
-			// 	.toISOString()
-			// 	.split('T')[0]
-			// 	.concat('T', newTimeComponent),
-			// id: uuidv4(),
-			title: 'String',
-			description: 'String',
-			deadline: 'String',
+			title: inputTitle,
+			description: inputDesc,
+			deadline: inputDate
+				.toISOString()
+				.split('T')[0]
+				.concat('T', newTimeComponent),
 			completed: false,
 			id: uuidv4(),
+			// title: 'String',
+			// description: 'String',
+			// deadline: 'String',
+			// completed: false,
+			// id: uuidv4(),
 		});
 	};
 
