@@ -1,0 +1,14 @@
+/* input[type='text'],
+input[type='date'],
+textarea {
+	display: block;
+}
+
+label,
+button {
+	user-select: none;
+}
+
+.submit-btn-div {
+	display: flex;
+} */

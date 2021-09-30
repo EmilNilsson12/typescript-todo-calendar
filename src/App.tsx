@@ -3,6 +3,7 @@ import './App.css';
 import AllTodos from './Components/AllTodos';
 import Calendar from './Components/Calendar';
 import DailyTodos from './Components/DailyTodos';
+import TodoForm from './Components/TodoForm/TodoForm';
 
 // DailyTodos
 // AllTodos
@@ -10,6 +11,10 @@ import DailyTodos from './Components/DailyTodos';
 
 interface Todo {
 	title: String;
+	description: String;
+	deadline: String;
+	completed: Boolean;
+	id: String;
 }
 
 interface TodoArr {
@@ -34,9 +39,9 @@ const App: FunctionComponent = () => {
 		localStorage.setItem('todos', JSON.stringify(todos));
 	}, [todos]);
 
-	const handleClick = () => {
+	const handleTodoAdd = (todoObj: Todo) => {
 		console.log('Button clicked');
-		const copyOfTodos: TodoArr['todos'] = [...todos, { title: 'hello' }];
+		const copyOfTodos: TodoArr['todos'] = [...todos, todoObj];
 		console.log('copyOfTodos: ', copyOfTodos);
 		setTodos(copyOfTodos);
 		localStorage.setItem('todos', JSON.stringify(todos));
@@ -44,9 +49,9 @@ const App: FunctionComponent = () => {
 
 	return (
 		<div className='App container'>
-			<button onClick={handleClick}>Add todo</button>
 			<AllTodos todos={todos} />
 			<Calendar />
+			<TodoForm addTodo={handleTodoAdd} />
 			<DailyTodos />
 		</div>
 	);
