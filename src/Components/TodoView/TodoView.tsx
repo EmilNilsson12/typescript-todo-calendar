@@ -4,7 +4,6 @@ import './TodoView.css';
 import { Todo } from '../../types';
 interface Props {
 	todoObj: Todo;
-	isInDaily: Boolean;
 	toggleCompleteTodo: (param: Todo) => void;
 	beginEdit: (param: Todo) => void;
 	deleteTodo: (param: String) => void;
@@ -13,8 +12,7 @@ interface Props {
 function TodoView(props: Props) {
 	const [confirmDeleteVisible, setConfirmDeleteVisible] = useState(false);
 
-	const { todoObj, toggleCompleteTodo, beginEdit, deleteTodo, isInDaily } =
-		props;
+	const { todoObj, toggleCompleteTodo, beginEdit, deleteTodo } = props;
 
 	const handleCompleteTodo = () => {
 		toggleCompleteTodo(todoObj);

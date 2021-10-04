@@ -4,7 +4,6 @@ import DayOfMonth from './DayOfMonth/DayOfMonth';
 
 import './CalenderView.css';
 import WeekDays from './WeekDays/WeekDays';
-// import DayWithTodos from '../DayWithTodos/DayWithTodos';
 
 function CalenderView({ todos, callBack, momentObj }) {
 	// Today should only change when the user manually refreshes the page

@@ -87,8 +87,6 @@ const App: FunctionComponent = () => {
 		<div className='App container'>
 			<AllTodos
 				todos={todos}
-				todoDeadline={currentDayInFocus}
-				isInDaily={false}
 				toggleCompleteTodo={crudOperations.toggleCompleteTodo}
 				beginEdit={crudOperations.updateTodo}
 				deleteTodo={crudOperations.deleteTodo}
