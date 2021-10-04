@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import moment, { Moment } from 'moment';
 import { v4 as uuidv4 } from 'uuid';
@@ -12,14 +12,19 @@ interface Props {
 }
 
 function TodoForm(props: Props) {
+	const { initialDeadline } = props;
+
 	const [inputTitle, setInputTitle] = useState('');
 	const [inputDesc, setInputDesc] = useState('');
-	const [inputDate, setInputDate] = useState(props.initialDeadline);
+	const [inputDate, setInputDate] = useState(initialDeadline);
 	const [inputDateValue, setInputDateValue] = useState(
 		inputDate.clone().toISOString().split('T')[0]
 	);
 
-	const firstFocusInputElement = useRef(null);
+	useEffect(() => {
+		setInputDate(initialDeadline);
+		setInputDateValue(inputDate.clone().toISOString().split('T')[0]);
+	}, [initialDeadline]);
 
 	// inputDate and inputDateValue should update when the form is mounted
 	// and when dayToShow is updated
@@ -96,7 +101,7 @@ function TodoForm(props: Props) {
 
 		let newDate = moment(datePlusTime);
 
-		// setInputDate(newDate);
+		setInputDate(newDate);
 		setInputDateValue(dateComponent);
 	};
 	const cancelUpdate = () => {
@@ -116,7 +121,6 @@ function TodoForm(props: Props) {
 						onChange={handleTitleChange}
 						required
 						autoFocus
-						ref={firstFocusInputElement}
 					/>
 				</p>
 				<p>

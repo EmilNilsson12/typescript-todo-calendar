@@ -6,9 +6,7 @@ import './CalenderView.css';
 import WeekDays from './WeekDays/WeekDays';
 // import DayWithTodos from '../DayWithTodos/DayWithTodos';
 
-function CalenderView({ todos, crudOperations }) {
-	const [momentObj, setMomentObject] = useState(() => moment());
-
+function CalenderView({ todos, callBack, momentObj }) {
 	// Today should only change when the user manually refreshes the page
 	const [today, setToday] = useState(moment());
 	const [currentTime, setCurrentTime] = useState(
@@ -64,7 +62,7 @@ function CalenderView({ todos, crudOperations }) {
 			.split('T')[0];
 
 		const newMomentObj = moment(dateComponent + 'T' + currentTime);
-		setMomentObject(newMomentObj);
+		callBack(newMomentObj);
 	};
 
 	const nextMonth = () => {
@@ -75,7 +73,7 @@ function CalenderView({ todos, crudOperations }) {
 			.split('T')[0];
 
 		const newMomentObj = moment(dateComponent + 'T' + currentTime);
-		setMomentObject(newMomentObj);
+		callBack(newMomentObj);
 	};
 
 	const dateClicked = ({ target }) => {
@@ -95,7 +93,7 @@ function CalenderView({ todos, crudOperations }) {
 			.split('T')[0];
 
 		const newMomentObj = moment(dateComponent + 'T' + currentTime);
-		setMomentObject(newMomentObj);
+		callBack(newMomentObj);
 	};
 
 	const renderDays = () => {

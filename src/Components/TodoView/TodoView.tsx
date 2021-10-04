@@ -4,10 +4,10 @@ import './TodoView.css';
 import { Todo } from '../../types';
 interface Props {
 	todoObj: Todo;
+	isInDaily: Boolean;
 	toggleCompleteTodo: (param: Todo) => void;
 	beginEdit: (param: Todo) => void;
 	deleteTodo: (param: String) => void;
-	isInDaily: Boolean;
 }
 
 function TodoView(props: Props) {

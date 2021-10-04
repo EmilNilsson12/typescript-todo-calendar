@@ -3,7 +3,7 @@ import './App.css';
 import AllTodos from './Components/AllTodos';
 import DailyTodos from './Components/DailyTodos';
 import TodoForm from './Components/TodoForm/TodoForm';
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 import CalenderView from './Components/CalenderView/CalenderView';
 
 import { Todo } from './types';
@@ -13,6 +13,11 @@ interface TodoArr {
 
 const App: FunctionComponent = () => {
 	const [todos, setTodos] = useState<TodoArr['todos']>([]);
+	const [currentDayInFocus, setCurrentDayInFocus] = useState(() => moment());
+
+	const updateMomentObjCallback = (newObj: Moment) => {
+		setCurrentDayInFocus(newObj);
+	};
 
 	// Initial assignment
 	useEffect(() => {
@@ -82,13 +87,29 @@ const App: FunctionComponent = () => {
 		<div className='App container'>
 			<AllTodos
 				todos={todos}
+				todoDeadline={currentDayInFocus}
+				isInDaily={false}
 				toggleCompleteTodo={crudOperations.toggleCompleteTodo}
 				beginEdit={crudOperations.updateTodo}
 				deleteTodo={crudOperations.deleteTodo}
 			/>
-			<CalenderView todos={todos} crudOperations={crudOperations} />
-			<TodoForm initialDeadline={moment()} addTodo={handleTodoAdd} />
-			<DailyTodos />
+			<CalenderView
+				todos={todos}
+				callBack={updateMomentObjCallback}
+				momentObj={currentDayInFocus}
+			/>
+			<TodoForm initialDeadline={currentDayInFocus} addTodo={handleTodoAdd} />
+			<DailyTodos
+				todos={todos.filter(
+					(todo) =>
+						todo.deadline.split('T')[0] ===
+						currentDayInFocus.format('YYYY-MM-DD')
+				)}
+				currentDayInFocus={currentDayInFocus}
+				toggleCompleteTodo={crudOperations.toggleCompleteTodo}
+				beginEdit={crudOperations.updateTodo}
+				deleteTodo={crudOperations.deleteTodo}
+			/>
 		</div>
 	);
 };
