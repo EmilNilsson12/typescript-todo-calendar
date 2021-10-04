@@ -22,7 +22,7 @@ function ListTodosForDay(props: Props) {
 
 	return (
 		<div className='DailyTodos'>
-			{currentDayInFocus.format('YYYY-MM-DD')}
+			Todos due: {currentDayInFocus.format('YYYY-MM-DD')}
 			{todos.map((todo) => (
 				<TodoView
 					key={todo.id}

@@ -52,7 +52,7 @@ const AllTodos = (props: Props) => {
 			<div className='AllTodos'>No todos yet...</div>
 		);
 	};
-	return <div className='AllTodos'>{mapReturnArr()}</div>;
+	return <div className='AllTodos'>All todos{mapReturnArr()}</div>;
 };
 
 export default AllTodos;
