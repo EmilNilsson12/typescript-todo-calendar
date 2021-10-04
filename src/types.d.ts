@@ -1,7 +1,7 @@
 export interface Todo {
-	title: String;
-	description: String;
-	deadline: String;
+	title: string;
+	description: string;
+	deadline: string;
 	completed: Boolean;
-	id: String;
+	id: string;
 }
