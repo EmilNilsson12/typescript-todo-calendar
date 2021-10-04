@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './TodoView.css';
 
+import { FaEdit, FaTrashAlt, FaCheck, FaCheckCircle } from 'react-icons/fa';
+
 import { Todo } from '../../types';
 interface Props {
 	todoObj: Todo;
@@ -54,10 +56,14 @@ function TodoView(props: Props) {
 					</>
 				) : (
 					<>
-						<button onClick={handleDeleteTodo}>Delete</button>
-						<button onClick={handleUpdateTodo}>Update</button>
+						<button onClick={handleDeleteTodo}>
+							<FaTrashAlt />
+						</button>
+						<button onClick={handleUpdateTodo}>
+							<FaEdit />
+						</button>
 						<button onClick={handleCompleteTodo}>
-							{todoObj.completed ? 'Unmark as complete' : 'Mark as complete'}
+							{todoObj.completed ? <FaCheckCircle /> : <FaCheck />}
 						</button>
 					</>
 				)}
