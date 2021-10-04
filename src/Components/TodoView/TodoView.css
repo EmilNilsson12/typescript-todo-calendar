@@ -8,17 +8,16 @@
 	background-color: rgb(0, 151, 144);
 }
 
+.todo-view div {
+	text-align: left;
+}
+
 .todo-view div h4 {
-	font-size: 30px;
-	margin-bottom: 10px;
+	margin-top: 5px;
 }
 
 .todo-view div p {
-	font-size: 16px;
-}
-
-.todo-view div p::before {
-	content: 'OBS! ';
+	margin-top: 5px;
 }
 
 .todo-completed {
