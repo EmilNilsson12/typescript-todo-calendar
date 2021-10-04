@@ -1,7 +1,6 @@
 import compareByDates from '../utils/compareByDate';
 
 import ListTodosForDay from './ListTodosForDay';
-import moment, { Moment } from 'moment';
 
 import { Todo } from '../types';
 interface Props {

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import moment from 'moment';
-import DayOfMonth from './DayOfMonth/DayOfMonth';
-
 import './CalenderView.css';
+
+import moment from 'moment';
+
+import DayOfMonth from './DayOfMonth/DayOfMonth';
 import WeekDays from './WeekDays/WeekDays';
 
 function CalenderView({ todos, callBack, momentObj }) {

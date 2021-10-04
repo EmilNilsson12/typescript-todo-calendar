@@ -1,10 +1,12 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import './App.css';
+
 import AllTodos from './Components/AllTodos';
 import DailyTodos from './Components/DailyTodos';
 import TodoForm from './Components/TodoForm/TodoForm';
-import moment, { Moment } from 'moment';
 import CalenderView from './Components/CalenderView/CalenderView';
+
+import moment, { Moment } from 'moment';
 
 import { Todo } from './types';
 interface TodoArr {
