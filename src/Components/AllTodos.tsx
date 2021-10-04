@@ -39,7 +39,6 @@ const AllTodos = (props: Props) => {
 			returnArr.push(
 				<ListTodosForDay
 					todos={dateWithTodos}
-					currentDayInFocus={moment(dateWithTodos[0].deadline.split('T')[0])}
 					toggleCompleteTodo={toggleCompleteTodo}
 					beginEdit={beginEdit}
 					deleteTodo={deleteTodo}
@@ -52,7 +51,12 @@ const AllTodos = (props: Props) => {
 			<div className='AllTodos'>No todos yet...</div>
 		);
 	};
-	return <div className='AllTodos'>All todos{mapReturnArr()}</div>;
+	return (
+		<div className='AllTodos'>
+			<h2>All todos</h2>
+			{mapReturnArr()}
+		</div>
+	);
 };
 
 export default AllTodos;

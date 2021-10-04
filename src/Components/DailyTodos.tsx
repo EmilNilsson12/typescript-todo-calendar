@@ -1,9 +1,12 @@
 import TodoView from './TodoView/TodoView';
 
+import ListTodosForDay from './ListTodosForDay';
+import compareByDates from '../utils/compareByDate';
+
 import { Moment } from 'moment';
 
 import { Todo } from '../types';
-import ListTodosForDay from './ListTodosForDay';
+
 interface Props {
 	todos: Array<Todo>;
 	currentDayInFocus: Moment;
@@ -21,11 +24,13 @@ function DailyTodos(props: Props) {
 		deleteTodo,
 	} = props;
 
+	let sortedAndByTime = [...todos.sort(compareByDates)];
+
 	return (
 		<div className='DailyTodos'>
+			<h2>Todos due: {currentDayInFocus.format('YYYY-MM-DD')}</h2>
 			<ListTodosForDay
-				todos={todos}
-				currentDayInFocus={currentDayInFocus}
+				todos={sortedAndByTime}
 				toggleCompleteTodo={toggleCompleteTodo}
 				beginEdit={beginEdit}
 				deleteTodo={deleteTodo}

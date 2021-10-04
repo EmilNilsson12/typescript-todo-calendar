@@ -1,28 +1,19 @@
 import TodoView from './TodoView/TodoView';
 
-import { Moment } from 'moment';
-
 import { Todo } from '../types';
 interface Props {
 	todos: Array<Todo>;
-	currentDayInFocus: Moment;
 	toggleCompleteTodo: (obj: Todo) => void;
 	beginEdit: (obj: Todo) => void;
 	deleteTodo: (id: String) => void;
 }
 
 function ListTodosForDay(props: Props) {
-	const {
-		todos,
-		currentDayInFocus,
-		toggleCompleteTodo,
-		beginEdit,
-		deleteTodo,
-	} = props;
+	const { todos, toggleCompleteTodo, beginEdit, deleteTodo } = props;
 
 	return (
 		<div className='DailyTodos'>
-			Todos due: {currentDayInFocus.format('YYYY-MM-DD')}
+			{todos[0]?.deadline?.split('T')[0]}
 			{todos.map((todo) => (
 				<TodoView
 					key={todo.id}
