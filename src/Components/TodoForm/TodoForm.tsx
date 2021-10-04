@@ -18,12 +18,12 @@ function TodoForm(props: Props) {
 	const [inputDesc, setInputDesc] = useState('');
 	const [inputDate, setInputDate] = useState(initialDeadline);
 	const [inputDateValue, setInputDateValue] = useState(
-		inputDate.clone().toISOString().split('T')[0]
+		initialDeadline.clone().toISOString().split('T')[0]
 	);
 
 	useEffect(() => {
 		setInputDate(initialDeadline);
-		setInputDateValue(inputDate.clone().toISOString().split('T')[0]);
+		setInputDateValue(initialDeadline.clone().toISOString().split('T')[0]);
 	}, [initialDeadline]);
 
 	// inputDate and inputDateValue should update when the form is mounted
