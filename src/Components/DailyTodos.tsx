@@ -1,5 +1,7 @@
 import ListTodosForDay from './ListTodosForDay';
 
+import './DailyTodos.css';
+
 import compareByDates from '../utils/compareByDate';
 
 import { Moment } from 'moment';
@@ -27,7 +29,12 @@ function DailyTodos(props: Props) {
 
 	return (
 		<div className='DailyTodos'>
-			<h2>Todos due: {currentDayInFocus.format('YYYY-MM-DD')}</h2>
+			<h2>
+				Todos due:{' '}
+				<span className='current-day-in-focus-header'>
+					{currentDayInFocus.format('YYYY-MM-DD')}
+				</span>
+			</h2>
 			<ListTodosForDay
 				todos={sortedByTime}
 				updateMomentObjCallback={updateMomentObjCallback}
