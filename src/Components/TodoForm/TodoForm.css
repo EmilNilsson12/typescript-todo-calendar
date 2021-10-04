@@ -1,14 +1,19 @@
-/* input[type='text'],
-input[type='date'],
-textarea {
-	display: block;
+.TodoFormContainer {
+	display: grid;
 }
 
-label,
-button {
-	user-select: none;
+.TodoForm {
+	width: 300px;
+	place-self: center;
+	padding: 0 10px;
 }
 
-.submit-btn-div {
+p {
 	display: flex;
-} */
+	justify-content: space-between;
+}
+
+input,
+textarea {
+	width: 130px;
+}

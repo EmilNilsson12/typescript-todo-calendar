@@ -19,27 +19,20 @@
 	grid-template-areas:
 		'AllTodos Calendar DailyTodos'
 		'AllTodos Calendar DailyTodos'
-		'AllTodos TodoForm DailyTodos';
-}
-.DailyTodos {
-	grid-area: DailyTodos;
+		'AllTodos TodoFormContainer DailyTodos';
 }
 .AllTodos {
 	grid-area: AllTodos;
+}
+.DailyTodos {
+	grid-area: DailyTodos;
 }
 .Calendar {
 	grid-area: Calendar;
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
+.TodoFormContainer {
+	grid-area: TodoFormContainer;
 }
 
 @media (max-width: 500px) {
@@ -48,16 +41,7 @@
 		grid-template-rows: 2fr 1fr 1fr;
 		grid-template-areas:
 			'Calendar Calendar Calendar'
-			'TodoForm AllTodos DailyTodos'
-			'TodoForm AllTodos DailyTodos';
-	}
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
+			'TodoFormContainer AllTodos DailyTodos'
+			'TodoFormContainer AllTodos DailyTodos';
 	}
 }
