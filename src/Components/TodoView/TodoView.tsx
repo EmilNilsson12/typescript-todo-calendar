@@ -59,9 +59,9 @@ function TodoView(props: Props) {
 						<button onClick={handleDeleteTodo}>
 							<FaTrashAlt />
 						</button>
-						<button onClick={handleUpdateTodo}>
+						{/* <button onClick={handleUpdateTodo}>
 							<FaEdit />
-						</button>
+						</button> */}
 						<button onClick={handleCompleteTodo}>
 							{todoObj.completed ? <FaCheckCircle /> : <FaCheck />}
 						</button>
