@@ -51,8 +51,8 @@ function TodoView(props: Props) {
 			<div className='todo-btns'>
 				{confirmDeleteVisible ? (
 					<>
-						<button onClick={confirmDeleteTodo}>Confirm delete</button>
 						<button onClick={cancelConfirmDeleteTodo}>Cancel delete</button>
+						<button onClick={confirmDeleteTodo}>Confirm delete</button>
 					</>
 				) : (
 					<>
