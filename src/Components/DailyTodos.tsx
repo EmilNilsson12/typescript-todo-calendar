@@ -24,13 +24,13 @@ function DailyTodos(props: Props) {
 		deleteTodo,
 	} = props;
 
-	let sortedAndByTime = [...todos.sort(compareByDates)];
+	let sortedByTime = [...todos.sort(compareByDates)];
 
 	return (
 		<div className='DailyTodos'>
 			<h2>Todos due: {currentDayInFocus.format('YYYY-MM-DD')}</h2>
 			<ListTodosForDay
-				todos={sortedAndByTime}
+				todos={sortedByTime}
 				toggleCompleteTodo={toggleCompleteTodo}
 				beginEdit={beginEdit}
 				deleteTodo={deleteTodo}
