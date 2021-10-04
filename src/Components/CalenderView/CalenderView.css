@@ -1,8 +1,4 @@
-.calendar {
-	/* height: 100%; */
-}
 .month-view {
-	/* background-color: rgba(255, 0, 0, 0.4); */
 	display: grid;
 	grid-template-rows: 50px 25px auto;
 }
