@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.23478a0c.chunk.css",
-    "main.js": "/static/js/main.dfb3f800.chunk.js",
-    "main.js.map": "/static/js/main.dfb3f800.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e559a48b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e559a48b.js.map",
-    "static/js/2.739a6347.chunk.js": "/static/js/2.739a6347.chunk.js",
-    "static/js/2.739a6347.chunk.js.map": "/static/js/2.739a6347.chunk.js.map",
-    "static/js/3.70bb923d.chunk.js": "/static/js/3.70bb923d.chunk.js",
-    "static/js/3.70bb923d.chunk.js.map": "/static/js/3.70bb923d.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.23478a0c.chunk.css.map": "/static/css/main.23478a0c.chunk.css.map",
-    "static/js/2.739a6347.chunk.js.LICENSE.txt": "/static/js/2.739a6347.chunk.js.LICENSE.txt"
+    "main.css": "/typescript-todo-calendar/static/css/main.23478a0c.chunk.css",
+    "main.js": "/typescript-todo-calendar/static/js/main.dfb3f800.chunk.js",
+    "main.js.map": "/typescript-todo-calendar/static/js/main.dfb3f800.chunk.js.map",
+    "runtime-main.js": "/typescript-todo-calendar/static/js/runtime-main.24b4d654.js",
+    "runtime-main.js.map": "/typescript-todo-calendar/static/js/runtime-main.24b4d654.js.map",
+    "static/js/2.739a6347.chunk.js": "/typescript-todo-calendar/static/js/2.739a6347.chunk.js",
+    "static/js/2.739a6347.chunk.js.map": "/typescript-todo-calendar/static/js/2.739a6347.chunk.js.map",
+    "static/js/3.70bb923d.chunk.js": "/typescript-todo-calendar/static/js/3.70bb923d.chunk.js",
+    "static/js/3.70bb923d.chunk.js.map": "/typescript-todo-calendar/static/js/3.70bb923d.chunk.js.map",
+    "index.html": "/typescript-todo-calendar/index.html",
+    "static/css/main.23478a0c.chunk.css.map": "/typescript-todo-calendar/static/css/main.23478a0c.chunk.css.map",
+    "static/js/2.739a6347.chunk.js.LICENSE.txt": "/typescript-todo-calendar/static/js/2.739a6347.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e559a48b.js",
+    "static/js/runtime-main.24b4d654.js",
     "static/js/2.739a6347.chunk.js",
     "static/css/main.23478a0c.chunk.css",
     "static/js/main.dfb3f800.chunk.js"
