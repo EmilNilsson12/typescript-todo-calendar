@@ -89,6 +89,7 @@ const App: FunctionComponent = () => {
 		<div className='App container'>
 			<AllTodos
 				todos={todos}
+				updateMomentObjCallback={updateMomentObjCallback}
 				toggleCompleteTodo={crudOperations.toggleCompleteTodo}
 				beginEdit={crudOperations.updateTodo}
 				deleteTodo={crudOperations.deleteTodo}
@@ -105,6 +106,7 @@ const App: FunctionComponent = () => {
 						todo.deadline.split('T')[0] ===
 						currentDayInFocus.format('YYYY-MM-DD')
 				)}
+				updateMomentObjCallback={updateMomentObjCallback}
 				currentDayInFocus={currentDayInFocus}
 				toggleCompleteTodo={crudOperations.toggleCompleteTodo}
 				beginEdit={crudOperations.updateTodo}

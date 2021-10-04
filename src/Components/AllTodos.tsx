@@ -3,15 +3,23 @@ import compareByDates from '../utils/compareByDate';
 import ListTodosForDay from './ListTodosForDay';
 
 import { Todo } from '../types';
+import { Moment } from 'moment';
 interface Props {
 	todos: Array<Todo>;
+	updateMomentObjCallback: (date: Moment) => void;
 	toggleCompleteTodo: (obj: Todo) => void;
 	beginEdit: (obj: Todo) => void;
 	deleteTodo: (id: String) => void;
 }
 
 const AllTodos = (props: Props) => {
-	const { todos, toggleCompleteTodo, beginEdit, deleteTodo } = props;
+	const {
+		todos,
+		updateMomentObjCallback,
+		toggleCompleteTodo,
+		beginEdit,
+		deleteTodo,
+	} = props;
 
 	// Sort all todos by date
 	let sortedAndByDueDate = [...todos.sort(compareByDates)];
@@ -37,6 +45,9 @@ const AllTodos = (props: Props) => {
 		for (const dateWithTodos of filteredTodosByDate) {
 			returnArr.push(
 				<ListTodosForDay
+					key={dateWithTodos[0].deadline}
+					updateMomentObjCallback={updateMomentObjCallback}
+					allTodos={true}
 					todos={dateWithTodos}
 					toggleCompleteTodo={toggleCompleteTodo}
 					beginEdit={beginEdit}

@@ -7,6 +7,7 @@ import { Todo } from '../types';
 interface Props {
 	todos: Array<Todo>;
 	currentDayInFocus: Moment;
+	updateMomentObjCallback: (date: Moment) => void;
 	toggleCompleteTodo: (obj: Todo) => void;
 	beginEdit: (obj: Todo) => void;
 	deleteTodo: (id: String) => void;
@@ -16,6 +17,7 @@ function DailyTodos(props: Props) {
 	const {
 		todos,
 		currentDayInFocus,
+		updateMomentObjCallback,
 		toggleCompleteTodo,
 		beginEdit,
 		deleteTodo,
@@ -28,6 +30,8 @@ function DailyTodos(props: Props) {
 			<h2>Todos due: {currentDayInFocus.format('YYYY-MM-DD')}</h2>
 			<ListTodosForDay
 				todos={sortedByTime}
+				updateMomentObjCallback={updateMomentObjCallback}
+				allTodos={false}
 				toggleCompleteTodo={toggleCompleteTodo}
 				beginEdit={beginEdit}
 				deleteTodo={deleteTodo}
