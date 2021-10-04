@@ -5,14 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import './TodoForm.css';
 
-interface Todo {
-	title: String;
-	description: String;
-	deadline: String;
-	completed: Boolean;
-	id: String;
-}
-
+import { Todo } from '../../types';
 interface Props {
 	initialDeadline: Moment;
 	addTodo(todoObj: Todo): void;

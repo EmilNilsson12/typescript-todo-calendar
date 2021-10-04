@@ -1,22 +1,27 @@
-// import { FunctionComponent } from 'react';
+import TodoView from './TodoView/TodoView';
 
-interface Todo {
-	title: String;
-}
-
+import { Todo } from '../types';
 interface Props {
 	todos: Array<Todo>;
-	// alt
-	// todos: Todo[];
+	toggleCompleteTodo: (obj: Todo) => void;
+	beginEdit: (obj: Todo) => void;
+	deleteTodo: (id: String) => void;
 }
 
 const AllTodos = (props: Props) => {
-	const { todos } = props;
+	const { todos, toggleCompleteTodo, beginEdit, deleteTodo } = props;
 
 	return (
 		<div className='AllTodos'>
 			{todos.map((todo, i) => (
-				<div key={i}>Title: {todo.title}</div>
+				<TodoView
+					todoObj={todo}
+					toggleCompleteTodo={toggleCompleteTodo}
+					beginEdit={beginEdit}
+					deleteTodo={deleteTodo}
+					isInDaily={false}
+				/>
+				// <div key={i}>Title: {todo.title}</div>
 			))}
 		</div>
 	);

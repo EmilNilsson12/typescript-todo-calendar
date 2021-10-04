@@ -1,9 +1,20 @@
 import { useState } from 'react';
-
 import './TodoView.css';
 
-function TodoView({ todoObj, toggleCompleteTodo, deleteTodo, beginEdit }) {
+import { Todo } from '../../types';
+interface Props {
+	todoObj: Todo;
+	toggleCompleteTodo: (param: Todo) => void;
+	beginEdit: (param: Todo) => void;
+	deleteTodo: (param: String) => void;
+	isInDaily: Boolean;
+}
+
+function TodoView(props: Props) {
 	const [confirmDeleteVisible, setConfirmDeleteVisible] = useState(false);
+
+	const { todoObj, toggleCompleteTodo, beginEdit, deleteTodo, isInDaily } =
+		props;
 
 	const handleCompleteTodo = () => {
 		toggleCompleteTodo(todoObj);

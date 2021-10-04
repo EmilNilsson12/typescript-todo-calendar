@@ -6,18 +6,7 @@ import TodoForm from './Components/TodoForm/TodoForm';
 import moment from 'moment';
 import CalenderView from './Components/CalenderView/CalenderView';
 
-// DailyTodos
-// AllTodos
-// Calendar
-
-interface Todo {
-	title: String;
-	description: String;
-	deadline: String;
-	completed: Boolean;
-	id: String;
-}
-
+import { Todo } from './types';
 interface TodoArr {
 	todos: Array<Todo>;
 }
@@ -55,7 +44,7 @@ const App: FunctionComponent = () => {
 
 			customHookSetTodos(copyOfTodos, setTodos, todoObj);
 		},
-		deleteTodo: (id: string) => {
+		deleteTodo: (id: String) => {
 			// Make copy of todos array
 			// and filter out the deleted todo
 			const copyOfTodos = [...todos].filter((todo) => todo.id !== id);
@@ -91,7 +80,12 @@ const App: FunctionComponent = () => {
 
 	return (
 		<div className='App container'>
-			<AllTodos todos={todos} />
+			<AllTodos
+				todos={todos}
+				toggleCompleteTodo={crudOperations.toggleCompleteTodo}
+				beginEdit={crudOperations.updateTodo}
+				deleteTodo={crudOperations.deleteTodo}
+			/>
 			<CalenderView todos={todos} crudOperations={crudOperations} />
 			<TodoForm initialDeadline={moment()} addTodo={handleTodoAdd} />
 			<DailyTodos />
