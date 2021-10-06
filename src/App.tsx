@@ -2,7 +2,7 @@ import { FunctionComponent, useEffect, useState } from 'react';
 import './App.css';
 
 import AllTodos from './Components/AllTodos';
-import DailyTodos from './Components/DailyTodos';
+import DailyTodos from './Components/DailyTodos/DailyTodos';
 import TodoForm from './Components/TodoForm/TodoForm';
 import CalenderView from './Components/CalenderView/CalenderView';
 

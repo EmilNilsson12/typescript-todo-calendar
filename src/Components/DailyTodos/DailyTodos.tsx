@@ -1,11 +1,11 @@
-import ListTodosForDay from './ListTodosForDay';
+import ListTodosForDay from '../ListTodosForDay';
 
 import './DailyTodos.css';
 
-import compareByDates from '../utils/compareByDate';
+import compareByDates from '../../utils/compareByDate';
 
 import { Moment } from 'moment';
-import { Todo } from '../types';
+import { Todo } from '../../types';
 interface Props {
 	todos: Array<Todo>;
 	currentDayInFocus: Moment;
