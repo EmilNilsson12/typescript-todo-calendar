@@ -14,7 +14,29 @@ interface TodoArr {
 }
 
 const App: FunctionComponent = () => {
-	const [todos, setTodos] = useState<TodoArr['todos']>([]);
+	const [todos, setTodos] = useState<TodoArr['todos']>([
+		{
+			title: 'Intervju med Emil',
+			description: '',
+			deadline: '2021-10-06T09:26:23.673Z',
+			completed: true,
+			id: 'e1a17603-bda9-434f-974a-36ebc9b9b924',
+		},
+		{
+			title: 'Kolla Emils Github',
+			description: '',
+			deadline: '2021-10-07T09:26:11.289Z',
+			completed: false,
+			id: 'c42914d7-77c4-45b3-88ef-f4a196a1c95a',
+		},
+		{
+			title: 'Ta helg!',
+			description: '',
+			deadline: '2021-10-09T09:27:23.570Z',
+			completed: false,
+			id: '61fe12a4-c115-4407-8e05-0bcb2199f40f',
+		},
+	]);
 	const [currentDayInFocus, setCurrentDayInFocus] = useState(() => moment());
 
 	const updateMomentObjCallback = (newObj: Moment) => {
