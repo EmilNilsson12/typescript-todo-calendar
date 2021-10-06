@@ -29,7 +29,6 @@
 }
 .DailyTodos {
 	grid-area: DailyTodos;
-	overflow-y: scroll;
 }
 .Calendar {
 	grid-area: Calendar;
