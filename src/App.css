@@ -22,9 +22,14 @@
 }
 .AllTodos {
 	grid-area: AllTodos;
+	overflow-y: scroll;
+}
+.AllTodos .DailyTodos:last-child {
+	margin-bottom: 20px;
 }
 .DailyTodos {
 	grid-area: DailyTodos;
+	overflow-y: scroll;
 }
 .Calendar {
 	grid-area: Calendar;
