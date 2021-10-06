@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/typescript-todo-calendar/static/css/main.7d5327aa.chunk.css",
+    "main.css": "/typescript-todo-calendar/static/css/main.de02a5e9.chunk.css",
     "main.js": "/typescript-todo-calendar/static/js/main.40b7e4a5.chunk.js",
     "main.js.map": "/typescript-todo-calendar/static/js/main.40b7e4a5.chunk.js.map",
     "runtime-main.js": "/typescript-todo-calendar/static/js/runtime-main.143656cf.js",
@@ -8,13 +8,13 @@
     "static/js/2.739a6347.chunk.js": "/typescript-todo-calendar/static/js/2.739a6347.chunk.js",
     "static/js/2.739a6347.chunk.js.map": "/typescript-todo-calendar/static/js/2.739a6347.chunk.js.map",
     "index.html": "/typescript-todo-calendar/index.html",
-    "static/css/main.7d5327aa.chunk.css.map": "/typescript-todo-calendar/static/css/main.7d5327aa.chunk.css.map",
+    "static/css/main.de02a5e9.chunk.css.map": "/typescript-todo-calendar/static/css/main.de02a5e9.chunk.css.map",
     "static/js/2.739a6347.chunk.js.LICENSE.txt": "/typescript-todo-calendar/static/js/2.739a6347.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.143656cf.js",
     "static/js/2.739a6347.chunk.js",
-    "static/css/main.7d5327aa.chunk.css",
+    "static/css/main.de02a5e9.chunk.css",
     "static/js/main.40b7e4a5.chunk.js"
   ]
 }
