@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/typescript-todo-calendar/static/css/main.4b4546e0.chunk.css",
-    "main.js": "/typescript-todo-calendar/static/js/main.3fd09cf5.chunk.js",
-    "main.js.map": "/typescript-todo-calendar/static/js/main.3fd09cf5.chunk.js.map",
+    "main.js": "/typescript-todo-calendar/static/js/main.fea2465f.chunk.js",
+    "main.js.map": "/typescript-todo-calendar/static/js/main.fea2465f.chunk.js.map",
     "runtime-main.js": "/typescript-todo-calendar/static/js/runtime-main.143656cf.js",
     "runtime-main.js.map": "/typescript-todo-calendar/static/js/runtime-main.143656cf.js.map",
     "static/js/2.e7510d82.chunk.js": "/typescript-todo-calendar/static/js/2.e7510d82.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.143656cf.js",
     "static/js/2.e7510d82.chunk.js",
     "static/css/main.4b4546e0.chunk.css",
-    "static/js/main.3fd09cf5.chunk.js"
+    "static/js/main.fea2465f.chunk.js"
   ]
 }
